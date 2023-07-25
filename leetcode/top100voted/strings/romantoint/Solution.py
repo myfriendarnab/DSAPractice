@@ -17,3 +17,5 @@ class Solution:
             'M':1000
         }
         return switch.get(c,"Invalid input")
+    
+Solution().romanToInt('III')
