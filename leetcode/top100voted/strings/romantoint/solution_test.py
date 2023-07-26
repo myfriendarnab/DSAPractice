@@ -9,6 +9,6 @@ import Solution
 # if __name__=='__main__':
 #     unittest.main()
 
-def given_nothing_should_return_0():
-    assert Solution.Solution().romanToInt('') == 0
+def test_given_nothing_should_return_0():
+    assert Solution.Solution().romanToInt('MMMDCCXXIV') == 3724
     
