@@ -1,4 +1,8 @@
-class Solution:
+class Solution():
+    
+    def __init__(self) -> None:
+        pass
+    
     def romanToInt(self, s: str) -> int:
         if len(s)<=1:
             return self.__get_number(s[0])
@@ -18,5 +22,7 @@ class Solution:
         }
         return switch.get(first_char,"Invalid input")
     
-r=Solution().romanToInt('MMMDCCXXIV')
-print(r)
+
+if __name__=='__main__':
+    r=Solution().romanToInt('MMMDCCXXIV')
+    print(r)
