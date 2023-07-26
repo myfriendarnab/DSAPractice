@@ -32,7 +32,9 @@ class Solutionlambda:
                 'D':500,
                 'M':1000
             }
-            if len(input)<=1:
-                return parse[s[0]]
-            sign = -1 if parse[s[0]]<parse[s[1]] else 1
-            return parse[s[0]]*sign + self.roman_to_int_lambda(s[1:])
+            
+            s=s.replace("IV", "IIII").replace("IX", "IIIIIIIII")
+            s=s.replace("XL", "XXXX").replace("XC", "XXXXXXXXX")
+            s=s.replace("CD", "CCCC").replace("CM", "CCCCCCCCC")
+
+            return sum(map(lambda x: parse[x],s))
