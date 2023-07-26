@@ -1,4 +1,4 @@
-class SolutionRecursion():
+class SolutionRecursion:
  
     def roman_to_int(self, s: str) -> int:
         if not s:
