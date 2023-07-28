@@ -39,7 +39,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"donjayamanne.python-extension-pack",
-                "bimaltimilsina.python-dark"
+                "bimaltimilsina.python-dark",
+				"littlefoxteam.vscode-python-test-adapter"
 			]
 		}
 	},
