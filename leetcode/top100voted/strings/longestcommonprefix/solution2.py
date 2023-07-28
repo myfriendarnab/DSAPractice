@@ -25,13 +25,14 @@ class Solution2:
                      True if 
                         len(list(filter(lambda x:x.find(ss)!=-1,l)))==len(l)
                         else False)
+        strs = sorted(strs)
         compare=strs[0]
         offset=1
         largest_common_prefixes=[''] # initializing for no match as first item
 
         # calculation
-        while offset<len(compare):
-            if substr_in_list(compare[:offset],strs[1:]):
+        while offset<=len(compare):
+            if substr_in_list(compare[:offset],strs):
                 if any(largest_common_prefixes) and compare[:offset-1]==largest_common_prefixes[-1]:
                     matcheddq:deque=largest_common_prefixes[-1]
                     matcheddq.append(compare[:offset])                  
@@ -45,5 +46,6 @@ class Solution2:
         largest_common_prefixes_strings = list(map(lambda x:''.join(x),largest_common_prefixes))
         return max(largest_common_prefixes_strings)
 
-# res=Solution2().longest_common_prefix(["flower","flow","flight"])
+# work around for debugging failed tests as test explorer is not working
+# res=Solution2().longest_common_prefix(['reflow','flow','flower','flour','reflex'])
 # print(res)
