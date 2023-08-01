@@ -1,5 +1,4 @@
 '''module for importing deque for stack implementation'''
-from collections import deque
 
 class Solution3:
     '''class for valid parentheses problem'''
